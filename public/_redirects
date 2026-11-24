@@ -1,0 +1,14 @@
+# Web uygulaması (tek sayfa uygulama): sayfa yolları index.html'e gider.
+# Yalnızca uygulama rotaları yazılı; _expo/ ve assets/ altındaki dosyalar etkilenmez.
+/uygulama                  /uygulama/  301
+/uygulama/welcome          /uygulama/  200
+/uygulama/cumlem           /uygulama/  200
+/uygulama/makine           /uygulama/  200
+/uygulama/tekrar           /uygulama/  200
+/uygulama/dersler          /uygulama/  200
+/uygulama/pro              /uygulama/  200
+/uygulama/review           /uygulama/  200
+/uygulama/city/*           /uygulama/  200
+/uygulama/lesson/*         /uygulama/  200
+/uygulama/quick/*          /uygulama/  200
+/uygulama/read/*           /uygulama/  200

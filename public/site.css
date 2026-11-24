@@ -1,0 +1,57 @@
+/* linguatravel.app ortak site stili. Renkler uygulamanın src/theme.ts dosyasından: mürekkep arayüz, yeşil kök, mavi ek, turuncu kişi. */
+@font-face{font-family:"Poppins";font-weight:800;font-display:swap;src:url(/fonts/Poppins-ExtraBold.ttf) format("truetype")}
+
+:root{
+  --bg:#F5F6F8; --surface:#FFFFFF; --soft:#EEF1F5; --line:#E6E8EC;
+  --ink:#0B1220; --body:#3B4453; --muted:#5A6372; --on-dark:#C9D2E3;
+  --root:#0F6B42; --root-bg:#E3F4EC; --key:#1D4ED8; --key-bg:#E6EEFE; --person:#A2470A; --person-bg:#FDF0E1;
+  --v-root:#34D399; --v-key:#6B93FF; --v-person:#FB923C;
+  --display:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --text:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1220; --surface:#131C2E; --soft:#18233A; --line:#24304A;
+    --ink:#F2F5FA; --body:#D3DAE6; --muted:#A4AEC0;
+    --root:#34D399; --root-bg:#10352A; --key:#8DA9FF; --key-bg:#18264A; --person:#FDBA74; --person-bg:#3A2614;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --surface:#131C2E; --soft:#18233A; --line:#24304A;
+  --ink:#F2F5FA; --body:#D3DAE6; --muted:#A4AEC0;
+  --root:#34D399; --root-bg:#10352A; --key:#8DA9FF; --key-bg:#18264A; --person:#FDBA74; --person-bg:#3A2614;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6}
+a{color:var(--key)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--key);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;text-wrap:balance;line-height:1.15}
+img{max-width:100%;height:auto}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand img{width:36px;height:36px;border-radius:9px}
+.brand b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em}
+.brand b i{font-style:normal;color:var(--muted)}
+.site-head{padding-block:16px}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-foot{padding-block:28px 44px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;border-top:1px solid var(--line);margin-top:40px}
+.site-foot a{color:var(--muted);font-weight:600}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+.btn.small{min-height:40px;padding:0 14px;font-size:15px}
+
+/* Metin sayfaları (gizlilik, destek) */
+.doc{max-width:680px;padding-block:20px 10px}
+.doc h1{font-size:clamp(30px,5vw,40px);margin:0 0 6px}
+.doc .date{color:var(--muted);font-size:14px;margin:0 0 22px}
+.doc .tldr{background:var(--key-bg);border-radius:18px;padding:16px 20px;margin:0 0 26px;color:var(--ink)}
+.doc h2{font-size:21px;margin:28px 0 6px}
+.doc p,.doc li{color:var(--body)}
+.doc p{margin:0 0 10px}
+.doc ul{padding-left:20px;margin:0 0 10px}
