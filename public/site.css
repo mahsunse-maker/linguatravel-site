@@ -2,7 +2,8 @@
 @font-face{font-family:"Poppins";font-weight:800;font-display:swap;src:url(/fonts/Poppins-ExtraBold.ttf) format("truetype")}
 
 :root{
-  --bg:#F5F6F8; --surface:#FFFFFF; --soft:#EEF1F5; --line:#E6E8EC;
+  --bg:#F2F7FD; --surface:#FFFFFF; --soft:#EAF1FA; --line:#E1E8F2;
+  --cta:#CF450B; --travel:#EA580C; --sky:#3B82F6;
   --ink:#0B1220; --body:#3B4453; --muted:#5A6372; --on-dark:#C9D2E3;
   --root:#0F6B42; --root-bg:#E3F4EC; --key:#1D4ED8; --key-bg:#E6EEFE; --person:#A2470A; --person-bg:#FDF0E1;
   --v-root:#34D399; --v-key:#6B93FF; --v-person:#FB923C;
@@ -14,14 +15,14 @@
   :root:not([data-theme="light"]){
     --bg:#0B1220; --surface:#131C2E; --soft:#18233A; --line:#24304A;
     --ink:#F2F5FA; --body:#D3DAE6; --muted:#A4AEC0;
-    --root:#34D399; --root-bg:#10352A; --key:#8DA9FF; --key-bg:#18264A; --person:#FDBA74; --person-bg:#3A2614;
+    --sky:#7DD3FC; --root:#34D399; --root-bg:#10352A; --key:#8DA9FF; --key-bg:#18264A; --person:#FDBA74; --person-bg:#3A2614;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0B1220; --surface:#131C2E; --soft:#18233A; --line:#24304A;
   --ink:#F2F5FA; --body:#D3DAE6; --muted:#A4AEC0;
-  --root:#34D399; --root-bg:#10352A; --key:#8DA9FF; --key-bg:#18264A; --person:#FDBA74; --person-bg:#3A2614;
+  --sky:#7DD3FC; --root:#34D399; --root-bg:#10352A; --key:#8DA9FF; --key-bg:#18264A; --person:#FDBA74; --person-bg:#3A2614;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -42,7 +43,7 @@ img{max-width:100%;height:auto}
 .site-foot a{color:var(--muted);font-weight:600}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px}
-.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.primary{background:var(--cta);color:#FFFFFF}
 .btn.ghost{border:1px solid var(--line);color:var(--ink);background:var(--surface)}
 .btn.small{min-height:40px;padding:0 14px;font-size:15px}
 
@@ -59,10 +60,10 @@ img{max-width:100%;height:auto}
 /* Yazı logosu: "Travel" mavi, ucundan iz ve uçak (uygulamadaki Wordmark ile aynı) */
 .brand{gap:8px}
 .brand b{letter-spacing:-.03em}
-.brand b .t{color:var(--key)}
+.brand b .t{color:#FFFFFF;background:var(--travel);border-radius:7px;padding:0 6px;margin-left:4px;display:inline-block;line-height:1.25}
 .brand .fly{width:30px;height:20px;margin-left:-6px;align-self:flex-start;margin-top:2px;overflow:visible}
-.fly .trail{fill:none;stroke:var(--key);stroke-width:1.8;stroke-linecap:round;stroke-dasharray:2.4 3;opacity:.8;animation:lt-trail 1.3s ease-out .25s both}
-.fly .plane{fill:var(--key);stroke:var(--key);stroke-width:1;stroke-linejoin:round}
+.fly .trail{fill:none;stroke:var(--sky);stroke-width:1.8;stroke-linecap:round;stroke-dasharray:2.4 3;opacity:.8;animation:lt-trail 1.3s ease-out .25s both}
+.fly .plane{fill:var(--sky);stroke:var(--sky);stroke-width:1;stroke-linejoin:round}
 .fly .go{animation:lt-fly 1.3s cubic-bezier(.2,.7,.3,1) .25s both}
 .fly .bob{animation:lt-bob 2.8s ease-in-out 1.6s infinite}
 @keyframes lt-trail{from{stroke-dashoffset:28;opacity:0}to{stroke-dashoffset:0;opacity:.8}}
