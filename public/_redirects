@@ -13,3 +13,6 @@
 /uygulama/quick/*          /uygulama/  200
 /uygulama/read/*           /uygulama/  200
 /uygulama/valiz/*           /uygulama/  200
+/uygulama/pasaport         /uygulama/  200
+/uygulama/kartpostal/*     /uygulama/  200
+/uygulama/kulak/*          /uygulama/  200
