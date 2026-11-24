@@ -55,3 +55,17 @@ img{max-width:100%;height:auto}
 .doc p,.doc li{color:var(--body)}
 .doc p{margin:0 0 10px}
 .doc ul{padding-left:20px;margin:0 0 10px}
+
+/* Yazı logosu: "Travel" mavi, ucundan iz ve uçak (uygulamadaki Wordmark ile aynı) */
+.brand{gap:8px}
+.brand b{letter-spacing:-.03em}
+.brand b .t{color:var(--key)}
+.brand .fly{width:30px;height:20px;margin-left:-6px;align-self:flex-start;margin-top:2px;overflow:visible}
+.fly .trail{fill:none;stroke:var(--key);stroke-width:1.8;stroke-linecap:round;stroke-dasharray:2.4 3;opacity:.8;animation:lt-trail 1.3s ease-out .25s both}
+.fly .plane{fill:var(--key);stroke:var(--key);stroke-width:1;stroke-linejoin:round}
+.fly .go{animation:lt-fly 1.3s cubic-bezier(.2,.7,.3,1) .25s both}
+.fly .bob{animation:lt-bob 2.8s ease-in-out 1.6s infinite}
+@keyframes lt-trail{from{stroke-dashoffset:28;opacity:0}to{stroke-dashoffset:0;opacity:.8}}
+@keyframes lt-fly{from{transform:translate(0,10px);opacity:0}15%{opacity:1}to{transform:translate(18px,-3px);opacity:1}}
+@keyframes lt-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.5px)}}
+@media (prefers-reduced-motion: reduce){.fly .trail,.fly .go,.fly .bob{animation:none}.fly .go{transform:translate(18px,-3px)}}
